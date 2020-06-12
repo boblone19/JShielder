@@ -1,19 +1,11 @@
 #!/bin/bash
 
+
 # JShielder v2.4
-# Deployer for Ubuntu Server 18.04 LTS
-#
-# Jason Soto
-# www.jasonsoto.com
-# www.jsitech-sec.com
-# Twitter = @JsiTech
+# Linux Hardening Script
 
-# Based from JackTheStripper Project
-# Credits to Eugenia Bahit
 
-# A lot of Suggestion Taken from The Lynis Project
-# www.cisofy.com/lynis
-# Credits to Michael Boelen @mboelen
+# Tool URL = github.com/xxxjshielder
 
 #Credits to Center for Internet Security CIS
 
@@ -26,15 +18,16 @@ f_banner(){
 echo
 echo "
 
-     ██╗███████╗██╗  ██╗██╗███████╗██╗     ██████╗ ███████╗██████╗
-     ██║██╔════╝██║  ██║██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗
-     ██║███████╗███████║██║█████╗  ██║     ██║  ██║█████╗  ██████╔╝
-██   ██║╚════██║██╔══██║██║██╔══╝  ██║     ██║  ██║██╔══╝  ██╔══██╗
-╚█████╔╝███████║██║  ██║██║███████╗███████╗██████╔╝███████╗██║  ██║
-╚════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝
 
-For Ubuntu Server 18.04 LTS
-Developed By Jason Soto @Jsitech"
+██╗░██████╗██████╗░██████╗░  ██████╗░░█████╗░██████╗░
+██║██╔════╝██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗
+██║╚█████╗░██║░░██║██████╔╝  ██████╦╝██║░░██║██████╦╝
+██║░╚═══██╗██║░░██║██╔═══╝░  ██╔══██╗██║░░██║██╔══██╗
+██║██████╔╝██████╔╝██║░░░░░  ██████╦╝╚█████╔╝██████╦╝
+╚═╝╚═════╝░╚═════╝░╚═╝░░░░░  ╚═════╝░░╚════╝░╚═════╝░
+                                                              
+Automated Hardening Script for Linux Servers
+Developed By ISDP & Cyber Security"
 echo
 echo
 
