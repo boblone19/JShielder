@@ -16,16 +16,17 @@ f_banner(){
 echo
 echo "
 
-     ██╗███████╗██╗  ██╗██╗███████╗██╗     ██████╗ ███████╗██████╗
-     ██║██╔════╝██║  ██║██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗
-     ██║███████╗███████║██║█████╗  ██║     ██║  ██║█████╗  ██████╔╝
-██   ██║╚════██║██╔══██║██║██╔══╝  ██║     ██║  ██║██╔══╝  ██╔══██╗
-╚█████╔╝███████║██║  ██║██║███████╗███████╗██████╔╝███████╗██║  ██║
-╚════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+
+██╗░██████╗██████╗░██████╗░  ██████╗░░█████╗░██████╗░
+██║██╔════╝██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗
+██║╚█████╗░██║░░██║██████╔╝  ██████╦╝██║░░██║██████╦╝
+██║░╚═══██╗██║░░██║██╔═══╝░  ██╔══██╗██║░░██║██╔══██╗
+██║██████╔╝██████╔╝██║░░░░░  ██████╦╝╚█████╔╝██████╦╝
+╚═╝╚═════╝░╚═════╝░╚═╝░░░░░  ╚═════╝░░╚════╝░╚═════╝░
                                                               
 CIS Benchmark Hardening
-For Ubuntu Server 16.04 LTS
-By Jason Soto "
+For Ubuntu Server 18.04 LTS"
+
 echo
 echo
 
@@ -533,7 +534,7 @@ cp templates/login.defs-CIS /etc/login.defs
 
 #5.4.1.4 Ensure inactive password lock is 30 days or less (Scored)
 
-useradd -D -f 30
+useradd -D -f 90
 
 #5.4.2 Ensure system accounts are non-login (Scored)
 
@@ -554,8 +555,16 @@ usermod -g 0 root
 
 sed -i s/umask\ 022/umask\ 027/g /etc/init.d/rc
 
+#5.4.5 Ensure default user shell timeout is 900 seconds or less (Scored) (Bob)
+echo "readonly TMOUT=900 ; export TMOUT" >> /etc/bashrc
+echo "readonly TMOUT=900 ; export TMOUT" >> /etc/profile
+
+
 #5.5 Ensure root login is restricted to system console (Not Scored)
 #5.6 Ensure access to the su command is restricted (Scored)
+
+groupadd sugroup
+echo "auth required pam_wheel.so use_uid group=sugroup" >> /etc/pam.d/su
 
 #6 System Maintenance
 #6.1 System File Permissions
@@ -612,6 +621,7 @@ chmod 600 /etc/gshadow-
 #6.1.12 Ensure no ungrouped files or directories exist (Scored)
 #6.1.13 Audit SUID executables (Not Scored)
 #6.1.14 Audit SGID executables (Not Scored)
+
 #6.2 User an d Group Settings
 #6.2.1 Ensure password fields are not empty (Scored)
 #6.2.2 Ensure no legacy "+" entries exist in /etc/passwd (Scored)
