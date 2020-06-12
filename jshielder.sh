@@ -3,19 +3,9 @@
 
 # JShielder v2.4
 # Linux Hardening Script
-#
-# Jason Soto
-# www.jasonsoto.com
-# Twitter = @JsiTech
 
-# Tool URL = github.com/jsitech/jshielder
 
-# Based from JackTheStripper Project
-# Credits to Eugenia Bahit
-
-# A lot of Suggestion Taken from The Lynis Project
-# www.cisofy.com/lynis
-# Credits to Michael Boelen @mboelen
+# Tool URL = github.com/xxxjshielder
 
 #Credits to Center for Internet Security CIS
 
@@ -25,15 +15,16 @@ f_banner(){
 echo
 echo "
 
-     ██╗███████╗██╗  ██╗██╗███████╗██╗     ██████╗ ███████╗██████╗
-     ██║██╔════╝██║  ██║██║██╔════╝██║     ██╔══██╗██╔════╝██╔══██╗
-     ██║███████╗███████║██║█████╗  ██║     ██║  ██║█████╗  ██████╔╝
-██   ██║╚════██║██╔══██║██║██╔══╝  ██║     ██║  ██║██╔══╝  ██╔══██╗
-╚█████╔╝███████║██║  ██║██║███████╗███████╗██████╔╝███████╗██║  ██║
-╚════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚═════╝ ╚══════╝╚═╝  ╚═╝
+
+██╗░██████╗██████╗░██████╗░  ██████╗░░█████╗░██████╗░
+██║██╔════╝██╔══██╗██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗
+██║╚█████╗░██║░░██║██████╔╝  ██████╦╝██║░░██║██████╦╝
+██║░╚═══██╗██║░░██║██╔═══╝░  ██╔══██╗██║░░██║██╔══██╗
+██║██████╔╝██████╔╝██║░░░░░  ██████╦╝╚█████╔╝██████╦╝
+╚═╝╚═════╝░╚═════╝░╚═╝░░░░░  ╚═════╝░░╚════╝░╚═════╝░
                                                               
 Automated Hardening Script for Linux Servers
-Developed By Jason Soto @JsiTech "
+Developed By ISDP & Cyber Security"
 echo
 echo
 
@@ -67,10 +58,13 @@ echo ""
 echo "1. Ubuntu Server 16.04 LTS"
 echo "2. Ubuntu Server 18.04 LTS"
 echo "3. Linux CentOS 7 (Coming Soon)"
-echo "4. Debian GNU/Linux 8 (Coming Soon)"
+echo "4. Linux CentOS 8 (Coming Soon)"
 echo "5. Debian GNU/Linux 9 (Coming Soon)"
-echo "6. Red Hat Linux 7 (Coming Soon)"
-echo "7. Exit"
+echo "6. Debian GNU/Linux 10 (Coming Soon)"
+echo "7. Red Hat Linux 7 (Coming Soon)"
+echo "8. Red Hat Linux 8 (Coming Soon)"
+echo "9. Aliyun Linux (Coming Soon)"
+echo "10. Exit"
 echo
 
 read menu
@@ -88,7 +82,7 @@ chmod +x jshielder.sh
 ./jshielder.sh
 ;;
 
-8)
+10)
 break
 ;;
 
