@@ -1,14 +1,4 @@
 ================================================================================
-    JShielder v 2.2 (CIS Hardening)
-    Linux Server Hardening and LAMP Deployment script
-
-    Developed by Jason Soto <www.jasonsoto.com>
-    http://www.jsitech-sec.com
-
-    License: GNU GPL version 3  <http://gnu.org/licenses/gpl.html>.
-    This is free software: you are free to change and redistribute it.
-    There is NO WARRANTY, to the extent permitted by law.
-
 
  Following Items Must be configured During initial System Install
 
