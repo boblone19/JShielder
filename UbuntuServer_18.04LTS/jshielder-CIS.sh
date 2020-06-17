@@ -1,12 +1,8 @@
 #!/bin/bash
 
 # JShielder v2.4
-# CIS Hardening Script for Ubuntu Server 16.04 LTS
-#
-# Jason Soto
-# www.jasonsoto.com
-# www.jsitech-sec.com
-# Twitter = @JsiTech
+# CIS Hardening Script for Ubuntu Server 18.04 LTS
+
 
 source helpers.sh
 
