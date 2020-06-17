@@ -4,9 +4,6 @@
 # JShielder v2.4
 # Linux Hardening Script
 
-
-# Tool URL = github.com/xxxjshielder
-
 #Credits to Center for Internet Security CIS
 
 
